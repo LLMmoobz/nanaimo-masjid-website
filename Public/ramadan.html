@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Information - Islamic Centre of Nanaimo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mosque logo-icon"></i>
+                    <h1>Islamic Centre of Nanaimo</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="posts.html">Posts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="friday-prayer.html">Friday Prayer Times</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ramadan.html">Ramadan Information</a></li>
+                    </ul>
+                </li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Ramadan Section -->
+        <section class="ramadan fade-in">
+            <h2>Ramadan Information</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Ramadan Calendar</h3>
+                    <p>Download the Ramadan calendar for prayer and Iftar times.</p>
+                    <a href="ramadan-calendar.pdf" class="cta-button" target="_blank">
+                        <i class="fas fa-download"></i> Download Calendar
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <h3>Taraweeh Prayers</h3>
+                    <p>Join us for Taraweeh prayers every night during Ramadan.</p>
+                    <p><strong>Time:</strong> After Isha Prayer</p>
+                    <p><strong>Location:</strong> Main Prayer Hall</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Community Iftar Potluck</h3>
+                    <p>Join us for community Iftar potluck dinners during Ramadan. Bring a dish to share and break bread with your community!</p>
+                    <p><strong>When:</strong> During Ramadan</p>
+                    <p><strong>Time:</strong> At Sunset</p>
+                    <p><strong>Location:</strong> Community Hall</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star-and-crescent"></i>
+                    </div>
+                    <h3>Ramadan Programs</h3>
+                    <p>Special programs, lectures, and activities throughout the blessed month of Ramadan.</p>
+                    <p>Stay connected with the community and strengthen your faith during this sacred time.</p>
+                    <a href="contact-us.html" class="cta-button">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
+        <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
+        <p>897 Harbourview Street, Nanaimo, BC</p>
+    </footer>
+
+    <!-- JavaScript for Dropdowns -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        if (e.target === dropdown.querySelector('a') || e.target === dropdown) {
+                            e.preventDefault();
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.toggle('active');
+                        }
+                    }
+                });
+
+                const links = dropdown.querySelectorAll('.dropdown-menu a');
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(e.target)) {
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+

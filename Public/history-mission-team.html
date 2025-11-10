@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Islamic Centre of Nanaimo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mosque logo-icon"></i>
+                    <h1>Islamic Centre of Nanaimo</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="posts.html">Posts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="history-mission-team.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="history-mission-team.html#history">Our History</a></li>
+                        <li><a href="history-mission-team.html#mission">Our Mission</a></li>
+                        <li><a href="history-mission-team.html#team">Our Team</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="friday-prayer.html">Friday Prayer Times</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ramadan.html">Ramadan Information</a></li>
+                    </ul>
+                </li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- History Section -->
+        <section id="history" class="fade-in">
+            <h2>Our History</h2>
+            <div class="content">
+                <div class="text">
+                    <p>The Islamic Centre of Nanaimo was established in 2005 to serve the growing Muslim community in
+                        Nanaimo. Over the years, we have become a hub for spiritual growth, education, and community
+                        engagement.</p>
+                </div>
+                <div class="image">
+                    <img src="images/history.jpg" alt="Our History">
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="fade-in">
+            <h2>Our Mission</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Our mission is to promote Islamic values of peace, compassion, and unity while providing a
+                        welcoming space for worship, education, and community events.</p>
+                </div>
+                <div class="image">
+                    <img src="images/mission.jpg" alt="Our Mission">
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="fade-in">
+            <h2>Our Team</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Our team is composed of dedicated volunteers and staff who work tirelessly to support the
+                        community. From organizing events to maintaining the mosque, we are committed to serving you.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="images/team.jpg" alt="Our Team">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
+    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
+    <p>897 Harbourview Street, Nanaimo, BC</p>
+</footer>
+
+    <!-- JavaScript for Dropdowns -->
+    <script>
+        // JavaScript for Dropdowns and Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Toggle mobile menu
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            // Handle dropdown menus
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                // For mobile: toggle dropdown on click
+                dropdown.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        // Only prevent default if clicking the dropdown parent, not a child link
+                        if (e.target === dropdown.querySelector('a') || e.target === dropdown) {
+                            e.preventDefault();
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.toggle('active');
+                        }
+                    }
+                });
+
+                // Make sure links inside dropdowns work
+                const links = dropdown.querySelectorAll('.dropdown-menu a');
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Allow the link to work normally
+                        e.stopPropagation();
+                    });
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(e.target)) {
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday Prayer Information - Islamic Centre of Nanaimo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mosque logo-icon"></i>
+                    <h1>Islamic Centre of Nanaimo</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="posts.html">Posts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="friday-prayer.html">Friday Prayer Times</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ramadan.html">Ramadan Information</a></li>
+                    </ul>
+                </li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Friday Prayer Information Section -->
+        <section class="friday-prayer fade-in">
+            <h2>Friday Prayer Information</h2>
+            <div class="prayer-boxes">
+                <div class="prayer-box">
+                    <div class="prayer-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <div class="prayer-name">Call to Prayer</div>
+                    <div class="prayer-time" id="friday-time">Loading...</div>
+                </div>
+                
+                <div class="prayer-box">
+                    <div class="prayer-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="prayer-name">Khutba Start</div>
+                    <div class="prayer-time" id="khutba-time">Loading...</div>
+                </div>
+                
+                <div class="prayer-box">
+                    <div class="prayer-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="prayer-name">Location</div>
+                    <div class="prayer-time">Main Prayer Hall</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
+    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
+    <p>897 Harbourview Street, Nanaimo, BC</p>
+</footer>
+
+    <!-- JavaScript for Dynamic Friday Prayer Time -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch Friday prayer time
+            async function fetchFridayPrayerTime() {
+                const city = "Nanaimo";
+                const country = "Canada";
+                const method = 2; // ISNA method
+
+                try {
+                    console.log("Fetching prayer times...");
+                    
+                    // Show loading state
+                    document.getElementById("friday-time").textContent = "Loading...";
+                    document.getElementById("khutba-time").textContent = "Loading...";
+
+                    // Make API request
+                    const response = await fetch(
+                        `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=${method}`
+                    );
+                    
+                    // Check if response is ok
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.status);
+                    }
+                    
+                    const data = await response.json();
+                    console.log("API response received:", data);
+                    
+                    // Verify data structure
+                    if (!data || !data.data || !data.data.timings) {
+                        throw new Error('Invalid data structure received');
+                    }
+
+                    // Extract Dhuhr time
+                    const dhuhrTime = data.data.timings.Dhuhr;
+                    console.log("Dhuhr time:", dhuhrTime);
+                    
+                    // Display the Friday prayer time (call to prayer)
+                    document.getElementById("friday-time").textContent = formatTime(dhuhrTime);
+
+                    // Calculate Khutba time (15 minutes AFTER Dhuhr)
+                    const [hours, minutes] = dhuhrTime.split(':');
+                    const khutbaTime = new Date();
+                    khutbaTime.setHours(parseInt(hours), parseInt(minutes) + 15, 0, 0);
+
+                    // Format Khutba time
+                    const khutbaTimeFormatted = khutbaTime.toLocaleTimeString('en-US', {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: true
+                    });
+
+                    console.log("Khutba time:", khutbaTimeFormatted);
+                    
+                    // Display the Khutba time
+                    document.getElementById("khutba-time").textContent = khutbaTimeFormatted;
+                    
+                } catch (error) {
+                    console.error("Error fetching Friday prayer time:", error);
+                    
+                    // Show error state and use fallback times
+                    useFallbackTimes();
+                }
+            }
+            
+            // Format 24h time to 12h time
+            function formatTime(time24h) {
+                if (!time24h) return "N/A";
+                
+                const [hours, minutes] = time24h.split(':');
+                const date = new Date();
+                date.setHours(parseInt(hours), parseInt(minutes), 0);
+                
+                return date.toLocaleTimeString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                });
+            }
+            
+            // Fallback times if API fails
+            function useFallbackTimes() {
+                console.log("Using fallback times");
+                
+                // Get current date to determine seasonal prayer times
+                const now = new Date();
+                const month = now.getMonth(); // 0-11
+                
+                // Seasonal prayer times for Nanaimo (approximate)
+                let dhuhrTime;
+                let khutbaTime;
+                
+                if (month >= 4 && month <= 8) { // May-September (summer)
+                    dhuhrTime = "1:15 PM";
+                    khutbaTime = "1:30 PM"; // 15 minutes after
+                } else { // Winter times
+                    dhuhrTime = "12:15 PM";
+                    khutbaTime = "12:30 PM"; // 15 minutes after
+                }
+                
+                // Update with fallback times
+                document.getElementById("friday-time").textContent = dhuhrTime;
+                document.getElementById("khutba-time").textContent = khutbaTime;
+            }
+
+            // Call the function to fetch Friday prayer time
+            fetchFridayPrayerTime();
+        });
+    </script>
+
+    <!-- JavaScript for Dropdowns -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        if (e.target === dropdown.querySelector('a') || e.target === dropdown) {
+                            e.preventDefault();
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.toggle('active');
+                        }
+                    }
+                });
+
+                const links = dropdown.querySelectorAll('.dropdown-menu a');
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(e.target)) {
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Islamic Centre of Nanaimo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mosque logo-icon"></i>
+                    <h1>Islamic Centre of Nanaimo</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="posts.html">Posts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="friday-prayer.html">Friday Prayer Times</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ramadan.html">Ramadan Information</a></li>
+                    </ul>
+                </li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Upcoming Events Section -->
+        <section class="upcoming-events fade-in">
+            <h2>Upcoming Events</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>Friday Jummah Prayer</h3>
+                    <p><strong>Date:</strong> Every Friday</p>
+                    <p><strong>Time:</strong> 1:00 PM</p>
+                    <p><strong>Location:</strong> Main Prayer Hall</p>
+                    <a href="friday-prayer.html" class="cta-button">More Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Community Iftar</h3>
+                    <p><strong>Date:</strong> Every Saturday during Ramadan</p>
+                    <p><strong>Time:</strong> Sunset</p>
+                    <p><strong>Location:</strong> Community Hall</p>
+                    <a href="ramadan.html" class="cta-button">More Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Quran Classes</h3>
+                    <p><strong>Date:</strong> Every Sunday</p>
+                    <p><strong>Time:</strong> 10:00 AM</p>
+                    <p><strong>Location:</strong> Education Wing</p>
+                    <a href="contact-us.html" class="cta-button">Register</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Islamic Studies Workshop</h3>
+                    <p><strong>Date:</strong> June 15, 2025</p>
+                    <p><strong>Time:</strong> 7:00 PM</p>
+                    <p><strong>Location:</strong> Main Hall</p>
+                    <a href="contact-us.html" class="cta-button">Register</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community Volunteer Day</h3>
+                    <p><strong>Date:</strong> July 5, 2025</p>
+                    <p><strong>Time:</strong> 9:00 AM - 3:00 PM</p>
+                    <p><strong>Location:</strong> Nanaimo Community Park</p>
+                    <a href="contact-us.html" class="cta-button">Volunteer</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Fun Day</h3>
+                    <p><strong>Date:</strong> August 12, 2025</p>
+                    <p><strong>Time:</strong> 11:00 AM - 4:00 PM</p>
+                    <p><strong>Location:</strong> Islamic Centre Grounds</p>
+                    <a href="contact-us.html" class="cta-button">RSVP</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
+    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
+    <p>897 Harbourview Street, Nanaimo, BC</p>
+</footer>
+
+    <!-- JavaScript for Dropdowns -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        if (e.target === dropdown.querySelector('a') || e.target === dropdown) {
+                            e.preventDefault();
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.toggle('active');
+                        }
+                    }
+                });
+
+                const links = dropdown.querySelectorAll('.dropdown-menu a');
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(e.target)) {
+                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
