@@ -78,7 +78,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Address</h3>
-                    <p>123 Mosque Street<br>Nanaimo, BC<br>Canada</p>
+                    <p>897 Harbourview Street<br>Nanaimo, BC<br>Canada</p>
                 </div>
             </div>
             
@@ -112,58 +112,8 @@
     <p>897 Harbourview Street, Nanaimo, BC</p>
 </footer>
 
-    <!-- JavaScript for Form Submission -->
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    </script>
-
-    <!-- JavaScript for Dropdowns -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        if (e.target === dropdown.querySelector('a') || e.target === dropdown) {
-                            e.preventDefault();
-                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                            dropdownMenu.classList.toggle('active');
-                        }
-                    }
-                });
-
-                const links = dropdown.querySelectorAll('.dropdown-menu a');
-                links.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                    });
-                });
-            });
-
-            document.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    dropdowns.forEach(dropdown => {
-                        if (!dropdown.contains(e.target)) {
-                            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                            dropdownMenu.classList.remove('active');
-                        }
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- Main JavaScript -->
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
