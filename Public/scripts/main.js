@@ -201,8 +201,29 @@ function displayCurrentDate(elementId) {
  */
 function handleContactFormSubmit(e) {
     e.preventDefault();
-    // TODO: Implement actual form submission to backend
-    alert('Thank you for your message! We will get back to you soon.');
+
+    const inquiryType = document.getElementById('inquiry-type')?.value || 'general';
+    const name = document.getElementById('name')?.value || '';
+
+    // Format inquiry type for display
+    const inquiryLabels = {
+        'general': 'General Inquiry',
+        'student-support': 'Student Support Services',
+        'janaza': 'Janaza (Funeral Services)',
+        'nikkah': 'Nikkah (Marriage Services)',
+        'education': 'Educational Programs',
+        'community-support': 'Community Support',
+        'volunteering': 'Volunteering',
+        'facility-rental': 'Facility Rental',
+        'donation': 'Donation Information',
+        'events': 'Events & Programs',
+        'other': 'Other'
+    };
+
+    const inquiryLabel = inquiryLabels[inquiryType] || inquiryType;
+
+    // TODO: Implement actual form submission to backend with inquiry type routing
+    alert(`Thank you for your message, ${name}!\n\nYour inquiry regarding "${inquiryLabel}" has been received.\n\nWe will get back to you within 24-48 hours.`);
     e.target.reset();
 }
 

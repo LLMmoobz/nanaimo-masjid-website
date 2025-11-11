@@ -83,24 +83,87 @@
             </div>
             
             <!-- Contact Form -->
-            <div class="contact-form fade-in" style="max-width: 600px; margin: 3rem auto;">
-                <div class="service-card">
-                    <h3 style="text-align: center;">Send Us a Message</h3>
+            <div class="contact-form fade-in" style="max-width: 700px; margin: 3rem auto;">
+                <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #f5fcfb 100%);">
+                    <h3 style="text-align: center; color: var(--islamic-green); margin-bottom: 0.5rem;">
+                        <i class="fas fa-envelope"></i> Send Us a Message
+                    </h3>
+                    <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem;">
+                        We'll respond to your inquiry as soon as possible
+                    </p>
+
                     <form id="contact-form">
-                        <div style="margin-bottom: 1rem;">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; border-radius: 4px; border: none;">
+                        <!-- Inquiry Type - Prominent Section -->
+                        <div style="margin-bottom: 2rem; padding: 1.25rem; background: linear-gradient(135deg, #f0faf9 0%, #e8f5f4 100%); border-radius: 12px; border-left: 4px solid var(--islamic-green);">
+                            <label for="inquiry-type" style="display: block; margin-bottom: 0.75rem; font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">
+                                <i class="fas fa-question-circle" style="color: var(--islamic-green);"></i> What is your inquiry about?
+                            </label>
+                            <select id="inquiry-type" name="inquiry-type" required style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); background: white; font-size: 1rem; color: var(--text-primary); cursor: pointer; transition: border-color 0.3s; font-weight: 500;">
+                                <option value="">Select inquiry type...</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="student-support">Student Support Services</option>
+                                <option value="janaza">Janaza (Funeral Services)</option>
+                                <option value="nikkah">Nikkah (Marriage Services)</option>
+                                <option value="education">Educational Programs / Quran Classes</option>
+                                <option value="community-support">Community Support / Assistance</option>
+                                <option value="volunteering">Volunteering Opportunities</option>
+                                <option value="facility-rental">Facility Rental</option>
+                                <option value="donation">Donation Information</option>
+                                <option value="events">Events & Programs</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <div style="margin-bottom: 1rem;">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; border-radius: 4px; border: none;">
+
+                        <!-- Contact Information -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name" style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; transition: border-color 0.3s;">
                         </div>
-                        <div style="margin-bottom: 1rem;">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.5rem; border-radius: 4px; border: none;"></textarea>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; transition: border-color 0.3s;">
                         </div>
-                        <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Phone Number <span style="color: var(--text-light); font-weight: 400;">(Optional)</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; transition: border-color 0.3s;">
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your inquiry..." style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; resize: vertical; font-family: 'Poppins', sans-serif; transition: border-color 0.3s;"></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button" style="width: 100%; font-size: 1.05rem; padding: 1rem;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <p style="text-align: center; margin-top: 1.25rem; font-size: 0.9rem; color: var(--text-light);">
+                            <i class="fas fa-clock"></i> We typically respond within 24-48 hours
+                        </p>
                     </form>
+                </div>
+
+                <!-- Service-Specific Quick Info -->
+                <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f5f7fa 0%, #f0faf9 100%); border-radius: 12px; border: 1px solid var(--card-border);">
+                    <h4 style="text-align: center; color: var(--islamic-green); margin-bottom: 1rem;">
+                        <i class="fas fa-info-circle"></i> Need Immediate Assistance?
+                    </h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.95rem;">
+                        <div style="text-align: center;">
+                            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+                                <i class="fas fa-phone" style="color: var(--islamic-green);"></i> Emergency/Janaza
+                            </div>
+                            <div style="color: var(--text-secondary);">Call: (123) 456-7890</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+                                <i class="fas fa-envelope" style="color: var(--islamic-green);"></i> General Email
+                            </div>
+                            <div style="color: var(--text-secondary);">info@nanaimomasjid.com</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

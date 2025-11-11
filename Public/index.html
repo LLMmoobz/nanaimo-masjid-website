@@ -4,17 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamic Centre of Nanaimo</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Islamic Centre of Nanaimo | Prayer Times, Services & Community Events</title>
+    <meta name="title" content="Islamic Centre of Nanaimo | Prayer Times, Services & Community Events">
+    <meta name="description" content="Welcome to the Islamic Centre of Nanaimo. Find daily prayer times, Friday Jummah, Ramadan programs, community services, and events for Muslims in Nanaimo, BC.">
+    <meta name="keywords" content="Islamic Centre Nanaimo, Mosque Nanaimo, Prayer Times Nanaimo, Jummah Nanaimo, Muslim Community BC, Ramadan Nanaimo">
+    <meta name="author" content="Islamic Centre of Nanaimo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nanaimomasjid.com/">
+    <meta property="og:title" content="Islamic Centre of Nanaimo | Prayer Times, Services & Community">
+    <meta property="og:description" content="Welcome to the Islamic Centre of Nanaimo. Find daily prayer times, Friday Jummah, Ramadan programs, and community services.">
+    <meta property="og:image" content="https://nanaimomasjid.com/images/masjidPhoto.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nanaimomasjid.com/">
+    <meta property="twitter:title" content="Islamic Centre of Nanaimo | Prayer Times, Services & Community">
+    <meta property="twitter:description" content="Welcome to the Islamic Centre of Nanaimo. Find daily prayer times, Friday Jummah, and community services.">
+    <meta property="twitter:image" content="https://nanaimomasjid.com/images/masjidPhoto.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Accessibility: Skip to main content link -->
+    <style>
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--islamic-green);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Accessibility: Skip to main content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- Header Section -->
-    <header>
+    <header role="banner">
         <nav>
             <div class="logo">
                 <a href="index.html">
@@ -54,7 +102,7 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content" role="main">
         <!-- Welcome Section -->
         <section class="welcome fade-in">
             <h2>Welcome to the Islamic Centre of Nanaimo</h2>

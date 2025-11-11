@@ -1,14 +1,42 @@
 /* ===========================
    Root Variables - Color Scheme
+   Enhanced using color theory for Islamic aesthetics
    =========================== */
 :root {
-  --primary-blue: #1a3e5d;
-  --islamic-green: #2d6a4f;
-  --accent-gold: #c5a227;
-  --pure-white: #f9f9f9;
-  --cta-coral: #ff6b6b;
-  --mist-gray: #e0e7ec;
-  --icon-colors: #83b7db;
+  /* Primary Colors - Spiritual & Calming */
+  --primary-teal: #0d7377;        /* Deep teal - represents tranquility and spirituality */
+  --secondary-blue: #14213d;      /* Navy - represents wisdom and depth */
+  --islamic-green: #2a9d8f;       /* Emerald green - represents paradise and growth */
+
+  /* Accent Colors - Warmth & Energy */
+  --accent-gold: #e9c46a;         /* Warm gold - represents enlightenment */
+  --accent-amber: #f4a261;        /* Amber - provides warmth without aggression */
+  --accent-coral: #e76f51;        /* Soft coral - call-to-action (less harsh than red) */
+
+  /* Neutral Colors - Balance & Readability */
+  --pure-white: #ffffff;
+  --off-white: #fefefe;
+  --cream: #faf9f6;               /* Cream background - easier on eyes */
+  --light-gray: #f0f0f0;
+  --medium-gray: #9ba4ab;
+  --dark-gray: #2b2d42;
+
+  /* Semantic Colors */
+  --text-primary: #2b2d42;        /* Dark for main text */
+  --text-secondary: #4a5568;      /* Medium for secondary text */
+  --text-light: #718096;          /* Light for subtle text */
+
+  /* UI Colors with transparency */
+  --overlay-dark: rgba(20, 33, 61, 0.85);
+  --overlay-light: rgba(250, 249, 246, 0.95);
+  --card-bg: rgba(255, 255, 255, 0.98);
+  --card-border: rgba(42, 157, 143, 0.1);
+
+  /* Shadows for depth */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* ===========================
@@ -23,18 +51,32 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(
-      to bottom right,
-      rgba(26, 62, 93, 0.85),
-      rgba(45, 106, 79, 0.85)
-    ),
-    url("../images/masjidPhoto.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: var(--pure-white);
-  line-height: 1.6;
+  /* Improved background: lighter overlay for better readability */
+  background: linear-gradient(
+      135deg,
+      var(--cream) 0%,
+      #e8f5f3 50%,
+      #d4e9e7 100%
+    );
+  color: var(--text-primary);
+  line-height: 1.7;
   min-height: 100vh;
+  position: relative;
+}
+
+/* Optional: Subtle pattern overlay for texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(42, 157, 143, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(233, 196, 106, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 img {
@@ -52,72 +94,94 @@ h3,
 h4 {
   font-family: "Amiri", serif;
   margin-top: 0;
-  color: var(--accent-gold);
+  color: var(--islamic-green);
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   margin-bottom: 0.5rem;
+  color: var(--secondary-blue);
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--primary-teal);
 }
 
 h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+  color: var(--islamic-green);
 }
 
 p {
   margin-bottom: 1rem;
-  color: var(--pure-white);
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 /* ===========================
    Links & Buttons
    =========================== */
 a {
-  color: var(--accent-gold);
+  color: var(--primary-teal);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 a:hover,
 a:focus {
-  color: var(--cta-coral);
+  color: var(--islamic-green);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: var(--cta-coral);
+  background: linear-gradient(135deg, var(--islamic-green), var(--primary-teal));
   color: var(--pure-white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  box-shadow: var(--shadow-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
 }
 
 .cta-button:hover,
 .cta-button:focus {
-  background-color: #e55a5a;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--primary-teal), var(--islamic-green));
   color: var(--pure-white);
   text-decoration: none;
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ===========================
    Navigation Bar
    =========================== */
 header {
-  background-color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-teal) 100%);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
 }
 
 nav {
@@ -145,17 +209,20 @@ nav {
   font-size: 1.8rem;
   color: var(--accent-gold);
   margin: 0;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo a:hover h1 {
-  color: var(--cta-coral);
+  color: var(--cream);
+  transform: translateX(2px);
 }
 
 .logo-icon {
   color: var(--accent-gold);
   font-size: 2rem;
   margin-right: 0.75rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .nav-links {
@@ -181,21 +248,22 @@ nav {
 
 .nav-links a:hover {
   color: var(--accent-gold);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-teal) 100%);
   top: 100%;
   left: 0;
-  min-width: 200px;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: var(--shadow-xl);
   z-index: 1000;
-  padding: 0.5rem 0;
-  border-top: 2px solid var(--accent-gold);
+  padding: 0.75rem 0;
+  border-top: 3px solid var(--accent-gold);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -274,32 +342,70 @@ section {
 }
 
 .service-card {
-  background-color: rgba(26, 62, 93, 0.7);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f0faf9 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Consistent elegant off-white background with subtle warmth */
+.service-card {
+  background: linear-gradient(135deg, #fdfdfb 0%, #f7f9f8 100%);
+}
+
+/* Accent border on top */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--islamic-green), var(--primary-teal), var(--accent-gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
 }
 
 .service-icon {
-  font-size: 2.5rem;
-  color: var(--icon-colors);
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--islamic-green);
+  margin-bottom: 1.25rem;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: var(--primary-teal);
 }
 
 .service-details {
   list-style: disc inside;
   margin: 1rem 0;
   padding: 0;
-  color: var(--pure-white);
+  color: var(--text-secondary);
+}
+
+.service-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
 .service-card > a.cta-button,
@@ -312,11 +418,19 @@ section {
    Footer
    =========================== */
 footer {
-  background-color: var(--primary-blue);
-  color: var(--pure-white);
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-teal) 100%);
+  color: var(--cream);
   text-align: center;
-  padding: 1.5rem 2rem;
-  font-size: 0.9rem;
+  padding: 2rem 2rem;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  color: var(--cream);
+  margin: 0.5rem 0;
+  opacity: 0.95;
 }
 
 /* ===========================
@@ -328,13 +442,25 @@ footer {
 }
 
 .prayer-times {
-  background-color: rgba(26, 62, 93, 0.7);
-  padding: 2rem;
-  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5fcfb 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
   width: 100%;
   max-width: 100%;
   margin: 2rem auto;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid rgba(42, 157, 143, 0.15);
+  position: relative;
+}
+
+.prayer-times h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.prayer-times p {
+  text-align: center;
+  color: var(--text-secondary);
 }
 
 .prayer-boxes {
@@ -348,15 +474,45 @@ footer {
 
 .prayer-box {
   flex: 1;
-  border-radius: 10px;
-  padding: 1.2rem 1rem;
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 120px;
   position: relative;
+  border: 2px solid transparent;
+  overflow: hidden;
 }
 
+/* Fajr - Dawn/Morning Blue */
+.prayer-box:nth-child(1) {
+  background: linear-gradient(135deg, #e3f2fd 0%, #d1e9f6 100%);
+  border-color: rgba(66, 165, 245, 0.2);
+}
+
+/* Dhuhr - High Noon Yellow/Gold */
+.prayer-box:nth-child(2) {
+  background: linear-gradient(135deg, #fff9e6 0%, #ffedcc 100%);
+  border-color: rgba(255, 193, 7, 0.25);
+}
+
+.prayer-box:nth-child(3) {
+  background: linear-gradient(135deg, #fef9ed 0%, #fdf4dc 100%);
+  border-color: rgba(233, 196, 106, 0.2);
+}
+
+.prayer-box:nth-child(4) {
+  background: linear-gradient(135deg, #fef5f0 0%, #fceee5 100%);
+  border-color: rgba(244, 162, 97, 0.2);
+}
+
+.prayer-box:nth-child(5) {
+  background: linear-gradient(135deg, #f0f2f5 0%, #e6e9ed 100%);
+  border-color: rgba(20, 33, 61, 0.15);
+}
+
+/* Colored accent on hover - make more vibrant */
 .prayer-box::before {
   content: '';
   position: absolute;
@@ -364,84 +520,68 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
   z-index: 0;
+  border-radius: 14px;
 }
+
+.prayer-box:nth-child(1)::before { background: linear-gradient(135deg, rgba(66, 165, 245, 0.15), rgba(100, 181, 246, 0.15)); }
+.prayer-box:nth-child(2)::before { background: linear-gradient(135deg, rgba(255, 193, 7, 0.18), rgba(255, 179, 0, 0.15)); }
+.prayer-box:nth-child(3)::before { background: linear-gradient(135deg, rgba(233, 196, 106, 0.15), rgba(244, 162, 97, 0.12)); }
+.prayer-box:nth-child(4)::before { background: linear-gradient(135deg, rgba(244, 162, 97, 0.12), rgba(231, 111, 81, 0.12)); }
+.prayer-box:nth-child(5)::before { background: linear-gradient(135deg, rgba(231, 111, 81, 0.1), rgba(20, 33, 61, 0.12)); }
 
 .prayer-box > * {
   position: relative;
   z-index: 1;
 }
 
-.prayer-box:nth-child(1) {
-  background: linear-gradient(135deg, #72c2d6, #39a4c2);
+.prayer-box:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--islamic-green);
 }
 
-.prayer-box:nth-child(2) {
-  background: linear-gradient(135deg, #ffd86f, #ffb347);
-}
-
-.prayer-box:nth-child(3) {
-  background: linear-gradient(135deg, #ffa26b, #ff7854);
-}
-
-.prayer-box:nth-child(4) {
-  background: linear-gradient(135deg, #a18cd1, #6b5ca5);
-}
-
-.prayer-box:nth-child(5) {
-  background: linear-gradient(135deg, #2c3e50, #1a2639);
+.prayer-box:hover::before {
+  opacity: 1;
 }
 
 .prayer-name {
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 0.3rem;
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  color: var(--islamic-green);
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
 }
 
 .prayer-time {
-  font-size: 1.2rem;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--secondary-blue);
+  font-family: "Poppins", sans-serif;
 }
-
-
-
-.prayer-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
 .prayer-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 0.8rem;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(197, 162, 39, 0.2) 100%
-  );
-  font-size: 2rem;
-  color: var(--accent-gold);
+  background: linear-gradient(135deg, rgba(42, 157, 143, 0.1), rgba(13, 115, 119, 0.15));
+  font-size: 2.25rem;
+  color: var(--islamic-green);
+  border: 2px solid var(--card-border);
+  transition: all 0.3s ease;
 }
 
-.prayer-name {
-  font-weight: bold;
-  color: var(--accent-gold);
-  margin-bottom: 0.3rem;
-  font-size: 1.1rem;
-}
-
-.prayer-time {
-  font-size: 1.2rem;
-  color: var(--pure-white);
+.prayer-box:hover .prayer-icon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(42, 157, 143, 0.2), rgba(13, 115, 119, 0.25));
+  border-color: var(--islamic-green);
 }
 
 .prayer-grid {
@@ -460,6 +600,21 @@ footer {
 
 .centered-text {
   text-align: center;
+}
+
+/* ===========================
+   Donation Form Styles
+   =========================== */
+/* Remove spinner arrows from number input - cleaner look */
+.donation-amount-input::-webkit-outer-spin-button,
+.donation-amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.donation-amount-input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /* ===========================
