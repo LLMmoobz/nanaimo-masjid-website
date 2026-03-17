@@ -587,14 +587,22 @@ p {
   gap: 0.9rem;
 }
 
+.prayer-boxes--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
 .prayer-box {
   display: grid;
   gap: 0.75rem;
+  justify-items: center;
   padding: 1.1rem;
   border-radius: 22px;
   background: linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(243, 237, 227, 0.9));
   border: 1px solid rgba(39, 74, 83, 0.08);
   min-height: 170px;
+  text-align: center;
 }
 
 .prayer-box.is-next {
@@ -1209,12 +1217,17 @@ p {
 .detail-card {
   display: grid;
   gap: 0.75rem;
+  justify-items: center;
   padding: 1.2rem;
   border-radius: var(--radius-md);
   background: rgba(255, 253, 248, 0.82);
   border: 1px solid rgba(39, 74, 83, 0.08);
   box-shadow: var(--shadow-sm);
   text-align: center;
+}
+
+.detail-card .card-icon {
+  justify-self: center;
 }
 
 .detail-card strong {
