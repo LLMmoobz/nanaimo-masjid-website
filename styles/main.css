@@ -632,6 +632,9 @@ p {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   color: var(--ink-900);
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .visit-band {
