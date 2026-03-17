@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Islamic Centre of Nanaimo</title>
+    <meta name="description" content="Regular masjid programs and Sheikh's Corner classes at the Islamic Centre of Nanaimo.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html" aria-current="page">Programs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html">Friday Prayer</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero compact fade-in">
+            <span class="eyebrow"><i class="fas fa-book-open"></i> Programs</span>
+            <h1>Classes and Programs</h1>
+            <p class="lede">Use the buttons below to view regular masjid programs or Sheikh's Corner.</p>
+        </section>
+
+        <section class="tab-shell fade-in" data-tab-group>
+            <div class="section-heading">
+                <span class="eyebrow"><i class="fas fa-columns"></i> Choose a Section</span>
+                <h2>Choose a section</h2>
+                <p>Select one section at a time.</p>
+            </div>
+
+            <div class="tab-switch" role="tablist" aria-label="Program categories">
+                <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab-target="masjid-programs">
+                    <i class="fas fa-mosque"></i> Masjid Programs
+                </button>
+                <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="sheikh-corner">
+                    <i class="fas fa-feather-alt"></i> Sheikh's Corner
+                </button>
+            </div>
+
+            <div class="tab-panels">
+                <section id="masjid-programs" class="program-track regular" data-tab-panel>
+                    <div class="track-header">
+                        <span class="eyebrow"><i class="fas fa-calendar-alt"></i> Masjid Programs</span>
+                        <h2>Regular classes hosted by the centre</h2>
+                        <p>These are the regular classes hosted by the masjid.</p>
+                    </div>
+                    <div class="grid-2">
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Weekly</span>
+                                <span>Children and youth</span>
+                            </div>
+                            <h3>Weekend Quran Learning</h3>
+                            <p>Quran reading and review for children and adults.</p>
+                            <a class="text-link" href="contact-us.html">Ask about enrollment</a>
+                        </article>
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Sundays</span>
+                                <span>Brothers and sisters</span>
+                            </div>
+                            <h3>Weekly Halaqah</h3>
+                            <p>Weekly study and reminder sessions.</p>
+                            <a class="text-link" href="contact-us.html">Ask for the current schedule</a>
+                        </article>
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Recurring</span>
+                                <span>Adults</span>
+                            </div>
+                            <h3>Foundations of Islamic Practice</h3>
+                            <p>Basic Islamic learning for adults who want regular study.</p>
+                            <a class="text-link" href="contact-us.html">Request details</a>
+                        </article>
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Community</span>
+                                <span>Families</span>
+                            </div>
+                            <h3>Family Learning Nights</h3>
+                            <p>Family sessions for parents and children.</p>
+                            <a class="text-link" href="contact-us.html">Express interest</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="sheikh-corner" class="program-track sheikh" data-tab-panel hidden>
+                    <div class="track-header">
+                        <span class="eyebrow"><i class="fas fa-feather-alt"></i> Sheikh's Corner</span>
+                        <h2>Independent Sheikh-led classes and sessions</h2>
+                        <p>These are classes and reminders led by the Sheikh when needed.</p>
+                    </div>
+                    <div class="grid-2">
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Flexible timing</span>
+                                <span>Topical</span>
+                            </div>
+                            <h3>Short teaching series</h3>
+                            <p>Short classes on important topics.</p>
+                            <a class="text-link" href="contact-us.html">Ask about the next session</a>
+                        </article>
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>As announced</span>
+                                <span>Open format</span>
+                            </div>
+                            <h3>Open Q&amp;A circles</h3>
+                            <p>Open sessions for questions and reminders.</p>
+                            <a class="text-link" href="contact-us.html">Submit a question</a>
+                        </article>
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Short notice possible</span>
+                                <span>Adults and seniors</span>
+                            </div>
+                            <h3>Tafsir and reflection sessions</h3>
+                            <p>Sessions on tafsir and selected topics.</p>
+                            <a class="text-link" href="contact-us.html">Get notified</a>
+                        </article>
+                        <article class="program-card">
+                            <div class="program-meta">
+                                <span>Need-based</span>
+                                <span>Pastoral</span>
+                            </div>
+                            <h3>Guidance and response sessions</h3>
+                            <p>Sessions for community questions and guidance.</p>
+                            <a class="text-link" href="contact-us.html">Contact the centre</a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="split-callout fade-in">
+            <div>
+                <h3>For registration or questions</h3>
+                <p>Please contact the centre.</p>
+            </div>
+            <a class="button-secondary" href="contact-us.html">Contact the Centre</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

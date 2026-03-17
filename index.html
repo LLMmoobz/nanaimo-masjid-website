@@ -4,238 +4,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>Islamic Centre of Nanaimo | Prayer Times, Services & Community Events</title>
-    <meta name="title" content="Islamic Centre of Nanaimo | Prayer Times, Services & Community Events">
-    <meta name="description" content="Welcome to the Islamic Centre of Nanaimo. Find daily prayer times, Friday Jummah, Ramadan programs, community services, and events for Muslims in Nanaimo, BC.">
-    <meta name="keywords" content="Islamic Centre Nanaimo, Mosque Nanaimo, Prayer Times Nanaimo, Jummah Nanaimo, Muslim Community BC, Ramadan Nanaimo">
-    <meta name="author" content="Islamic Centre of Nanaimo">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nanaimomasjid.com/">
-    <meta property="og:title" content="Islamic Centre of Nanaimo | Prayer Times, Services & Community">
-    <meta property="og:description" content="Welcome to the Islamic Centre of Nanaimo. Find daily prayer times, Friday Jummah, Ramadan programs, and community services.">
+    <title>Islamic Centre of Nanaimo | Prayer Times, Programs, Community</title>
+    <meta name="description" content="Prayer times, Friday prayer information, programs, classes, and community updates from the Islamic Centre of Nanaimo.">
+    <meta property="og:title" content="Islamic Centre of Nanaimo">
+    <meta property="og:description" content="A welcoming masjid for worship, learning, and community life in Nanaimo.">
     <meta property="og:image" content="https://nanaimomasjid.com/images/masjidPhoto.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nanaimomasjid.com/">
-    <meta property="twitter:title" content="Islamic Centre of Nanaimo | Prayer Times, Services & Community">
-    <meta property="twitter:description" content="Welcome to the Islamic Centre of Nanaimo. Find daily prayer times, Friday Jummah, and community services.">
-    <meta property="twitter:image" content="https://nanaimomasjid.com/images/masjidPhoto.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Accessibility: Skip to main content link -->
-    <style>
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--islamic-green);
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 100;
-        }
-        .skip-to-content:focus {
-            top: 0;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Accessibility: Skip to main content -->
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- Header Section -->
-    <header role="banner">
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-mosque logo-icon"></i>
-                    <h1>Islamic Centre of Nanaimo</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="friday-prayer.html">Friday Prayer Times</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ramadan.html">Ramadan Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="donate.html">Donate</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque" aria-hidden="true"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html">Friday Prayer</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-        <!-- Welcome Section -->
-        <section class="welcome fade-in">
-            <h2>Welcome to the Islamic Centre of Nanaimo</h2>
-            <div class="content">
-                <div class="text">
-                    <p>
-                        The Islamic Centre of Nanaimo is a vibrant community dedicated to serving Muslims in Nanaimo and surrounding areas. We offer a place for prayer, education, and community gatherings.
-                    </p>
-                    <a href="about.html" class="cta-button">Learn More About Us</a>
+    <main id="main-content">
+        <section class="hero fade-in">
+            <div class="hero-copy">
+                <span class="eyebrow"><i class="fas fa-star-and-crescent"></i> Nanaimo, British Columbia</span>
+                <div class="stack">
+                    <h1>Prayer times, classes, and masjid information.</h1>
+                    <p class="lede">Find prayer times, Friday prayer details, classes, contact information, and Ramadan information in one place.</p>
                 </div>
-                <!-- <div class="image">
-                    <img src="images/mosque.jpg" alt="Islamic Centre of Nanaimo">
-                </div> -->
+                <div class="hero-actions">
+                    <a class="button" href="programs.html"><i class="fas fa-book-open"></i> Explore Programs</a>
+                    <a class="button-secondary" href="ramadan.html"><i class="fas fa-moon"></i> Ramadan Information</a>
+                    <a class="button-ghost" href="contact-us.html"><i class="fas fa-envelope"></i> Contact the Centre</a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-card">
+                        <strong>Friday Prayer</strong>
+                        <span>See this week's Friday prayer information.</span>
+                    </div>
+                    <div class="meta-card">
+                        <strong>Ramadan</strong>
+                        <span>Calendar, juz schedule, and taraweeh details.</span>
+                    </div>
+                    <div class="meta-card">
+                        <strong>Contact</strong>
+                        <span>Address, email, phone, and contact form.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-badge">
+                    <strong>Visit the centre</strong>
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                </div>
             </div>
         </section>
 
-        <!-- Prayer Times Section -->
-        <section class="prayer-times-section fade-in">
-            <h2 style="text-align:center;">The Five Prayer Times</h2>
-            <div class="prayer-times">
-                <p style="text-align: center; margin-bottom: 1.5rem;">Today's Date: <span id="today-date">Loading...</span></p>
-                
+        <section id="prayer-times" class="section-shell fade-in">
+            <div class="section-heading">
+                <span class="eyebrow"><i class="fas fa-clock"></i> Prayer Times</span>
+                <h2>Today's salah times</h2>
+                <p>Prayer times are shown for Nanaimo. The next prayer is highlighted below.</p>
+            </div>
+            <div class="prayer-layout">
+                <div class="prayer-overview">
+                    <div class="prayer-status">
+                        <span>Today</span>
+                        <strong id="today-date">Loading...</strong>
+                        <p id="next-prayer-time">Loading the next prayer...</p>
+                    </div>
+                    <div class="prayer-legend">
+                        <span class="chip"><i class="fas fa-map-marker-alt"></i> Nanaimo, BC</span>
+                        <span class="chip"><i class="fas fa-wifi"></i> Live data</span>
+                        <span class="chip"><i class="fas fa-info-circle"></i> Friday details on a separate page</span>
+                    </div>
+                </div>
                 <div id="prayer-boxes" class="prayer-boxes">
-                    <p style="text-align: center;">Loading prayer times...</p>
+                    <div class="card">
+                        <p>Loading prayer times...</p>
+                    </div>
                 </div>
-                
-                <p style="text-align: center; margin-top: 1.5rem; font-size: 1.2rem;">
-                    Next prayer in: <span id="next-prayer-time" style="font-weight: bold; color: var(--accent-gold);">Loading...</span>
-                </p>
             </div>
         </section>
 
-        <!-- Events Section -->
-        <section class="events fade-in">
-            <h2>Upcoming Events</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3>Friday Jummah Prayer</h3>
-                    <p>Join us for Friday prayers every week.</p>
-                    <p><strong>Time:</strong> 1:00 PM</p>
-                    <a href="friday-prayer.html" class="cta-button">Learn More</a>
+        <section class="section-shell fade-in">
+            <div class="section-heading">
+                <span class="eyebrow"><i class="fas fa-mosque"></i> At the Centre</span>
+                <h2>Main Pages</h2>
+                <p>Use these pages for classes, Friday prayer, and centre information.</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Programs</h3>
+                    <p>Regular masjid programs and Sheikh's Corner are listed on the Programs page.</p>
+                    <a class="card-link" href="programs.html">View Programs <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>Friday Prayer</h3>
+                    <p>See the Friday prayer time, khutbah time, and visit information.</p>
+                    <a class="card-link" href="friday-prayer.html">View Friday Prayer <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-circle-info"></i></div>
+                    <h3>Services</h3>
+                    <p>Read about daily prayers, janaza support, nikkah services, and other services.</p>
+                    <a class="card-link" href="services.html">View Services <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="highlight-grid fade-in">
+            <article class="panel">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-moon"></i> Ramadan</span>
+                    <h2>Ramadan Information</h2>
+                    <p>See the Ramadan calendar, the juz schedule, and taraweeh details.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-book-open"></i>
+                <div class="info-list">
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-calendar-alt"></i></span>
+                        <div>
+                            <h4>Calendar</h4>
+                            <p>View the Ramadan calendar on the page and download a copy.</p>
+                        </div>
                     </div>
-                    <h3>Quran Classes</h3>
-                    <p>Weekly Quran classes for all ages.</p>
-                    <p><strong>Time:</strong> Sundays at 10:00 AM</p>
-                    <a href="upcoming-events.html" class="cta-button">See Details</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands-helping"></i>
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-book-open"></i></span>
+                        <div>
+                            <h4>Juz schedule</h4>
+                            <p>See the daily juz breakdown for taraweeh.</p>
+                        </div>
                     </div>
-                    <h3>Community Support</h3>
-                    <p>We offer various services to support our community.</p>
-                    <a href="services.html" class="cta-button">Our Services</a>
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-microphone"></i></span>
+                        <div>
+                            <h4>Taraweeh details</h4>
+                            <p>See the nightly order and taraweeh details.</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="button-row" style="margin-top: 1rem;">
+                    <a class="button" href="ramadan.html">View Ramadan Information</a>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-map-marker-alt"></i> Visit the Centre</span>
+                    <h2>Address and Contact</h2>
+                    <p>For directions, contact information, and questions.</p>
+                </div>
+                <div class="info-list">
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>897 Harbourview Street, Nanaimo, BC</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-envelope"></i></span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@nanaimomasjid.com</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-phone"></i></span>
+                        <div>
+                            <h4>Contact</h4>
+                            <p>Use the contact page for questions and registration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-row" style="margin-top: 1rem;">
+                    <a class="button-secondary" href="contact-us.html">Contact the Centre</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="section-shell fade-in">
+            <div class="section-heading">
+                <span class="eyebrow"><i class="fas fa-link"></i> More Pages</span>
+                <h2>Other Information</h2>
+                <p>Use these pages for events, updates, and donations.</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Special Events</h3>
+                    <p>Community gatherings and other events.</p>
+                    <a class="card-link" href="upcoming-events.html">View Events <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Updates</h3>
+                    <p>Announcements and community notes.</p>
+                    <a class="card-link" href="posts.html">View Updates <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="card">
+                    <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Donate</h3>
+                    <p>Support the centre and its work.</p>
+                    <a class="card-link" href="donate.html">View Donations <i class="fas fa-arrow-right"></i></a>
+                </article>
             </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
-    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
-    <p>897 Harbourview Street, Nanaimo, BC</p>
-</footer>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
+    </footer>
 
-    <!-- Main JavaScript -->
     <script src="scripts/main.js"></script>
-
-    <!-- Page-specific: Prayer Times Display -->
     <script>
-        // Display prayer times and countdown
         async function initializePrayerTimes() {
+            const prayerIcons = {
+                Fajr: "fa-sun",
+                Dhuhr: "fa-circle",
+                Asr: "fa-cloud-sun",
+                Maghrib: "fa-moon",
+                Isha: "fa-star"
+            };
+
             try {
-                // Fetch prayer times using shared utility function
                 const timings = await fetchPrayerTimes();
+                const nextPrayer = getNextPrayer(timings);
+                const prayers = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+                const container = document.getElementById("prayer-boxes");
 
-                // Define prayers with icons
-                const prayers = [
-                    { name: "Fajr", time: timings.Fajr, icon: "fa-sun" },
-                    { name: "Dhuhr", time: timings.Dhuhr, icon: "fa-sun" },
-                    { name: "Asr", time: timings.Asr, icon: "fa-cloud-sun" },
-                    { name: "Maghrib", time: timings.Maghrib, icon: "fa-moon" },
-                    { name: "Isha", time: timings.Isha, icon: "fa-star" }
-                ];
+                container.innerHTML = "";
 
-                // Display prayer boxes
-                const prayerBoxesContainer = document.getElementById("prayer-boxes");
-                prayerBoxesContainer.innerHTML = "";
-
-                prayers.forEach(prayer => {
-                    const box = document.createElement("div");
+                prayers.forEach((name) => {
+                    const box = document.createElement("article");
                     box.className = "prayer-box";
 
+                    if (name === nextPrayer.name) {
+                        box.classList.add("is-next");
+                    }
+
                     box.innerHTML = `
-                        <div class="prayer-icon">
-                            <i class="fas ${prayer.icon}"></i>
-                        </div>
-                        <div class="prayer-name">${prayer.name}</div>
-                        <div class="prayer-time">${formatTime(prayer.time)}</div>
+                        <div class="prayer-icon"><i class="fas ${prayerIcons[name]}" aria-hidden="true"></i></div>
+                        <div class="prayer-name">${name}</div>
+                        <div class="prayer-time">${formatTime(timings[name])}</div>
                     `;
 
-                    prayerBoxesContainer.appendChild(box);
+                    container.appendChild(box);
                 });
 
-                // Update countdown every second
-                function updateCountdown() {
-                    const nextPrayer = getNextPrayer(timings);
-                    const timeDiff = nextPrayer.timeObj - new Date();
+                const updateCountdown = () => {
+                    const currentNextPrayer = getNextPrayer(timings);
+                    const timeDiff = currentNextPrayer.timeObj - new Date();
                     const countdown = formatCountdown(timeDiff);
 
                     document.getElementById("next-prayer-time").textContent =
-                        `${countdown.hours}h ${countdown.minutes}m ${countdown.seconds}s until ${nextPrayer.name}`;
-                }
+                        `${countdown.hours}h ${countdown.minutes}m ${countdown.seconds}s until ${currentNextPrayer.name}`;
+                };
 
                 updateCountdown();
                 setInterval(updateCountdown, 1000);
             } catch (error) {
-                console.error("Error initializing prayer times:", error);
                 document.getElementById("prayer-boxes").innerHTML =
-                    "<p>Failed to load prayer times. Please try again later.</p>";
+                    "<article class='card'><p>Prayer times are temporarily unavailable. Please refresh shortly or contact the centre for today's schedule.</p></article>";
+                document.getElementById("next-prayer-time").textContent =
+                    "Prayer times are temporarily unavailable.";
             }
         }
 
-        // Display current date and initialize prayer times
-        displayCurrentDate('today-date');
+        displayCurrentDate("today-date");
         initializePrayerTimes();
     </script>
 </body>

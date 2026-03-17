@@ -4,115 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramadan Information - Islamic Centre of Nanaimo</title>
+    <title>Ramadan | Islamic Centre of Nanaimo</title>
+    <meta name="description" content="Ramadan calendar, taraweeh details, juz breakdown, and downloadable calendar for the Islamic Centre of Nanaimo.">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-mosque logo-icon"></i>
-                    <h1>Islamic Centre of Nanaimo</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="friday-prayer.html">Friday Prayer Times</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ramadan.html">Ramadan Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="donate.html">Donate</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html">Friday Prayer</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Ramadan Section -->
-        <section class="ramadan fade-in">
-            <h2>Ramadan Information</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Ramadan Calendar</h3>
-                    <p>Download the Ramadan calendar for prayer and Iftar times.</p>
-                    <a href="../Nanaimo_ramadan_calendar.pdf" class="cta-button" target="_blank">
-                        <i class="fas fa-download"></i> Download Calendar
-                    </a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-praying-hands"></i>
-                    </div>
-                    <h3>Taraweeh Prayers</h3>
-                    <p>Join us for Taraweeh prayers every night during Ramadan.</p>
-                    <p><strong>Time:</strong> After Isha Prayer</p>
-                    <p><strong>Location:</strong> Main Prayer Hall</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Community Iftar Potluck</h3>
-                    <p>Join us for community Iftar potluck dinners during Ramadan. Bring a dish to share and break bread with your community!</p>
-                    <p><strong>When:</strong> During Ramadan</p>
-                    <p><strong>Time:</strong> At Sunset</p>
-                    <p><strong>Location:</strong> Community Hall</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-star-and-crescent"></i>
-                    </div>
-                    <h3>Ramadan Programs</h3>
-                    <p>Special programs, lectures, and activities throughout the blessed month of Ramadan.</p>
-                    <p>Stay connected with the community and strengthen your faith during this sacred time.</p>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-info-circle"></i> Learn More
-                    </a>
-                </div>
+    <main id="main-content">
+        <section class="page-hero compact fade-in">
+            <span class="eyebrow"><i class="fas fa-moon"></i> Ramadan</span>
+            <h1>Ramadan Calendar and Taraweeh Information</h1>
+            <p class="lede">See the Ramadan calendar, daily juz schedule, and taraweeh details.</p>
+        </section>
+
+        <section class="detail-grid fade-in">
+            <article class="detail-card">
+                <div class="card-icon"><i class="fas fa-clock"></i></div>
+                <strong>Nightly order</strong>
+                <p>Isha adhan is followed by a short reminder, then taraweeh begins. Confirm exact local times nightly with the centre.</p>
+            </article>
+            <article class="detail-card">
+                <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                <strong>Prayer format</strong>
+                <p>Taraweeh is listed here as 20 rak'ah prayed in sets of two, followed by witr.</p>
+            </article>
+            <article class="detail-card">
+                <div class="card-icon"><i class="fas fa-microphone"></i></div>
+                <strong>Khutbah and reminders</strong>
+                <p>Friday khutbah remains on the Friday Prayer page. A short nightly bayan or reminder can be delivered before taraweeh.</p>
+            </article>
+        </section>
+
+        <section class="calendar-shell fade-in">
+            <div class="section-heading">
+                <span class="eyebrow"><i class="fas fa-calendar-alt"></i> Ramadan Calendar</span>
+                <h2>Calendar</h2>
+                <p>Update the dates and local times once the centre confirms them.</p>
             </div>
+
+            <div class="calendar-actions">
+                <a class="button" href="downloads/ramadan-calendar-template.csv" download><i class="fas fa-download"></i> Download Calendar</a>
+                <a class="button-secondary" href="friday-prayer.html"><i class="fas fa-microphone"></i> Friday khutbah timing</a>
+            </div>
+
+            <div class="calendar-table-wrap">
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Ramadan Day</th>
+                            <th>Juz for Taraweeh</th>
+                            <th>Nightly Reminder</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Day 1</td><td>Juz 1</td><td>After Isha</td><td>Confirm local start time</td></tr>
+                        <tr><td>Day 2</td><td>Juz 2</td><td>After Isha</td><td>Community Quran focus</td></tr>
+                        <tr><td>Day 3</td><td>Juz 3</td><td>After Isha</td><td>Open to all attendees</td></tr>
+                        <tr><td>Day 4</td><td>Juz 4</td><td>After Isha</td><td>Update if timing shifts</td></tr>
+                        <tr><td>Day 5</td><td>Juz 5</td><td>After Isha</td><td>Family attendance encouraged</td></tr>
+                        <tr><td>Day 6</td><td>Juz 6</td><td>After Isha</td><td>Check local prayer board</td></tr>
+                        <tr><td>Day 7</td><td>Juz 7</td><td>After Isha</td><td>Nightly bayan before taraweeh</td></tr>
+                        <tr><td>Day 8</td><td>Juz 8</td><td>After Isha</td><td>Volunteers may host iftar</td></tr>
+                        <tr><td>Day 9</td><td>Juz 9</td><td>After Isha</td><td>Confirm time locally</td></tr>
+                        <tr><td>Day 10</td><td>Juz 10</td><td>After Isha</td><td>End of first third</td></tr>
+                        <tr><td>Day 11</td><td>Juz 11</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 12</td><td>Juz 12</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 13</td><td>Juz 13</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 14</td><td>Juz 14</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 15</td><td>Juz 15</td><td>After Isha</td><td>Mid-month checkpoint</td></tr>
+                        <tr><td>Day 16</td><td>Juz 16</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 17</td><td>Juz 17</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 18</td><td>Juz 18</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 19</td><td>Juz 19</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 20</td><td>Juz 20</td><td>After Isha</td><td>Last ten nights approach</td></tr>
+                        <tr><td>Day 21</td><td>Juz 21</td><td>After Isha</td><td>Increase attendance planning</td></tr>
+                        <tr><td>Day 22</td><td>Juz 22</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 23</td><td>Juz 23</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 24</td><td>Juz 24</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 25</td><td>Juz 25</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 26</td><td>Juz 26</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 27</td><td>Juz 27</td><td>After Isha</td><td>Potentially busy night</td></tr>
+                        <tr><td>Day 28</td><td>Juz 28</td><td>After Isha</td><td>Template entry</td></tr>
+                        <tr><td>Day 29</td><td>Juz 29</td><td>After Isha</td><td>Moon-sighting dependent</td></tr>
+                        <tr><td>Day 30</td><td>Juz 30</td><td>After Isha</td><td>Completion night if 30 days</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="grid-2 fade-in">
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-moon"></i></div>
+                <h3>Taraweeh detail</h3>
+                <p>Isha adhan, short reminder, then 20 rak'ah of taraweeh followed by witr.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+                <h3>Friday during Ramadan</h3>
+                <p>Friday khutbah timing remains on the dedicated Friday Prayer page so worshippers can find it quickly without mixing it into the nightly Ramadan schedule.</p>
+                <a class="text-link" href="friday-prayer.html">Open Friday Prayer details</a>
+            </article>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
-        <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
-        <p>897 Harbourview Street, Nanaimo, BC</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
     </footer>
 
-    <!-- Main JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 
 </html>
-

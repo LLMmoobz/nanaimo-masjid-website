@@ -4,178 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Islamic Centre of Nanaimo</title>
+    <title>Contact the Islamic Centre of Nanaimo</title>
+    <meta name="description" content="Contact information, inquiry form, and directions for the Islamic Centre of Nanaimo.">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-mosque logo-icon"></i>
-                    <h1>Islamic Centre of Nanaimo</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="friday-prayer.html">Friday Prayer Times</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ramadan.html">Ramadan Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="donate.html">Donate</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html">Friday Prayer</a></li>
+                    <li><a href="contact-us.html" aria-current="page">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Contact Us Section -->
-        <section class="contact-info fade-in">
-            <h2>Contact Us</h2>
-            <div class="service-grid">
-                <div class="service-card centered-text">
-                    <div class="service-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a></p>
-                </div>
-                <div class="service-card centered-text">
-                    <div class="service-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:1234567890">(123) 456-7890</a></p>
-                </div>
-                <div class="service-card centered-text">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Address</h3>
-                    <p>897 Harbourview Street<br>Nanaimo, BC<br>Canada</p>
-                </div>
-            </div>
-            
-            <!-- Contact Form -->
-            <div class="contact-form fade-in" style="max-width: 700px; margin: 3rem auto;">
-                <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #f5fcfb 100%);">
-                    <h3 style="text-align: center; color: var(--islamic-green); margin-bottom: 0.5rem;">
-                        <i class="fas fa-envelope"></i> Send Us a Message
-                    </h3>
-                    <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem;">
-                        We'll respond to your inquiry as soon as possible
-                    </p>
+    <main id="main-content">
+        <section class="page-hero compact fade-in">
+            <span class="eyebrow"><i class="fas fa-envelope"></i> Contact</span>
+            <h1>Contact the Centre</h1>
+            <p class="lede">Use the contact details below or send a message for classes, Friday prayer questions, donations, or general inquiries.</p>
+        </section>
 
-                    <form id="contact-form">
-                        <!-- Inquiry Type - Prominent Section -->
-                        <div style="margin-bottom: 2rem; padding: 1.25rem; background: linear-gradient(135deg, #f0faf9 0%, #e8f5f4 100%); border-radius: 12px; border-left: 4px solid var(--islamic-green);">
-                            <label for="inquiry-type" style="display: block; margin-bottom: 0.75rem; font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">
-                                <i class="fas fa-question-circle" style="color: var(--islamic-green);"></i> What is your inquiry about?
-                            </label>
-                            <select id="inquiry-type" name="inquiry-type" required style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); background: white; font-size: 1rem; color: var(--text-primary); cursor: pointer; transition: border-color 0.3s; font-weight: 500;">
-                                <option value="">Select inquiry type...</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="student-support">Student Support Services</option>
-                                <option value="janaza">Janaza (Funeral Services)</option>
-                                <option value="nikkah">Nikkah (Marriage Services)</option>
-                                <option value="education">Educational Programs / Quran Classes</option>
-                                <option value="community-support">Community Support / Assistance</option>
-                                <option value="volunteering">Volunteering Opportunities</option>
-                                <option value="facility-rental">Facility Rental</option>
-                                <option value="donation">Donation Information</option>
-                                <option value="events">Events & Programs</option>
+        <section class="contact-grid fade-in">
+            <div class="stack">
+                <article class="contact-card">
+                    <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Visit in person</h3>
+                    <p>897 Harbourview Street<br>Nanaimo, BC</p>
+                    <a class="card-link" href="https://www.google.com/maps/search/?api=1&amp;query=897+Harbourview+Street+Nanaimo+BC" target="_blank" rel="noreferrer">Open in Maps <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="contact-card">
+                    <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>For general questions and class information.</p>
+                    <a class="card-link" href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="contact-card">
+                    <div class="card-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Phone</h3>
+                    <p>Main line: (123) 456-7890</p>
+                    <a class="card-link" href="tel:1234567890">Call now <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <div class="utility-note"><i class="fas fa-clock"></i> Typical response time: 24 to 48 hours</div>
+            </div>
+
+            <article class="panel form-card">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-paper-plane"></i> Message the Centre</span>
+                    <h2>Send a message</h2>
+                </div>
+                <form id="contact-form">
+                    <div class="input-grid">
+                        <div class="field">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-grid">
+                        <div class="field">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Optional">
+                        </div>
+                        <div class="field">
+                            <label for="inquiry-type">Inquiry type</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="general">General inquiry</option>
+                                <option value="education">Programs and classes</option>
+                                <option value="sheikh">Sheikh's Corner</option>
+                                <option value="friday">Friday prayer</option>
+                                <option value="support">Community support</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="donate">Donation support</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
-
-                        <!-- Contact Information -->
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Full Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your name" style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; transition: border-color 0.3s;">
-                        </div>
-
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; transition: border-color 0.3s;">
-                        </div>
-
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Phone Number <span style="color: var(--text-light); font-weight: 400;">(Optional)</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; transition: border-color 0.3s;">
-                        </div>
-
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your inquiry..." style="width: 100%; padding: 0.875rem; border-radius: 8px; border: 2px solid var(--card-border); font-size: 1rem; resize: vertical; font-family: 'Poppins', sans-serif; transition: border-color 0.3s;"></textarea>
-                        </div>
-
-                        <button type="submit" class="cta-button" style="width: 100%; font-size: 1.05rem; padding: 1rem;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-
-                        <p style="text-align: center; margin-top: 1.25rem; font-size: 0.9rem; color: var(--text-light);">
-                            <i class="fas fa-clock"></i> We typically respond within 24-48 hours
-                        </p>
-                    </form>
-                </div>
-
-                <!-- Service-Specific Quick Info -->
-                <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f5f7fa 0%, #f0faf9 100%); border-radius: 12px; border: 1px solid var(--card-border);">
-                    <h4 style="text-align: center; color: var(--islamic-green); margin-bottom: 1rem;">
-                        <i class="fas fa-info-circle"></i> Need Immediate Assistance?
-                    </h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.95rem;">
-                        <div style="text-align: center;">
-                            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
-                                <i class="fas fa-phone" style="color: var(--islamic-green);"></i> Emergency/Janaza
-                            </div>
-                            <div style="color: var(--text-secondary);">Call: (123) 456-7890</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
-                                <i class="fas fa-envelope" style="color: var(--islamic-green);"></i> General Email
-                            </div>
-                            <div style="color: var(--text-secondary);">info@nanaimomasjid.com</div>
-                        </div>
                     </div>
-                </div>
-            </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+                    </div>
+
+                    <button class="button" type="submit"><i class="fas fa-paper-plane"></i> Send message</button>
+                    <p class="helper-text">This form is a placeholder until email or form delivery is connected.</p>
+                </form>
+            </article>
         </section>
     </main>
 
-   <footer>
-    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
-    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
-    <p>897 Harbourview Street, Nanaimo, BC</p>
-</footer>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
+    </footer>
 
-    <!-- Main JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 

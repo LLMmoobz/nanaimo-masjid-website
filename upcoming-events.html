@@ -4,133 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcoming Events - Islamic Centre of Nanaimo</title>
+    <title>Special Events | Islamic Centre of Nanaimo</title>
+    <meta name="description" content="Special events, community gatherings, and seasonal activity around the Islamic Centre of Nanaimo.">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-mosque logo-icon"></i>
-                    <h1>Islamic Centre of Nanaimo</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="friday-prayer.html">Friday Prayer Times</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ramadan.html">Ramadan Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="donate.html">Donate</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html">Friday Prayer</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Upcoming Events Section -->
-        <section class="upcoming-events fade-in">
-            <h2>Upcoming Events</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3>Friday Jummah Prayer</h3>
-                    <p><strong>Date:</strong> Every Friday</p>
-                    <p><strong>Time:</strong> 1:00 PM</p>
-                    <p><strong>Location:</strong> Main Prayer Hall</p>
-                    <a href="friday-prayer.html" class="cta-button">More Details</a>
+    <main id="main-content">
+        <section class="page-hero compact fade-in">
+            <span class="eyebrow"><i class="fas fa-calendar-alt"></i> Special Events</span>
+            <h1>Community Gatherings and Special Events</h1>
+            <p class="lede">This page lists special events and community gatherings. Regular classes are on the Programs page.</p>
+        </section>
+
+        <section class="grid-2 fade-in">
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>Community welcome gathering</h3>
+                <p>An informal gathering to meet families, students, and new visitors to the Nanaimo Muslim community.</p>
+                <div class="mini-list">
+                    <span>Announced by post</span>
+                    <span>Family friendly</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Community Iftar</h3>
-                    <p><strong>Date:</strong> Every Saturday during Ramadan</p>
-                    <p><strong>Time:</strong> Sunset</p>
-                    <p><strong>Location:</strong> Community Hall</p>
-                    <a href="ramadan.html" class="cta-button">More Details</a>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Shared meals and potlucks</h3>
+                <p>Occasional food-centered gatherings that help the community connect outside of formal programs.</p>
+                <div class="mini-list">
+                    <span>Seasonal</span>
+                    <span>Volunteer-friendly</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Quran Classes</h3>
-                    <p><strong>Date:</strong> Every Sunday</p>
-                    <p><strong>Time:</strong> 10:00 AM</p>
-                    <p><strong>Location:</strong> Education Wing</p>
-                    <a href="contact-us.html" class="cta-button">Register</a>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3>Volunteer and service days</h3>
+                <p>Centre improvement days, outreach activities, and community support efforts published as needed.</p>
+                <div class="mini-list">
+                    <span>As announced</span>
+                    <span>Community-led</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Islamic Studies Workshop</h3>
-                    <p><strong>Date:</strong> June 15, 2025</p>
-                    <p><strong>Time:</strong> 7:00 PM</p>
-                    <p><strong>Location:</strong> Main Hall</p>
-                    <a href="contact-us.html" class="cta-button">Register</a>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-children"></i></div>
+                <h3>Family and youth socials</h3>
+                <p>Gatherings designed to help younger community members build friendships and attachment to the masjid.</p>
+                <div class="mini-list">
+                    <span>Flexible timing</span>
+                    <span>Hosted at the centre</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Community Volunteer Day</h3>
-                    <p><strong>Date:</strong> July 5, 2025</p>
-                    <p><strong>Time:</strong> 9:00 AM - 3:00 PM</p>
-                    <p><strong>Location:</strong> Nanaimo Community Park</p>
-                    <a href="contact-us.html" class="cta-button">Volunteer</a>
+            </article>
+        </section>
+
+        <section class="highlight-grid fade-in">
+            <article class="panel">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-lightbulb"></i> How this page works now</span>
+                    <h2>Recurring classes live elsewhere</h2>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Family Fun Day</h3>
-                    <p><strong>Date:</strong> August 12, 2025</p>
-                    <p><strong>Time:</strong> 11:00 AM - 4:00 PM</p>
-                    <p><strong>Location:</strong> Islamic Centre Grounds</p>
-                    <a href="contact-us.html" class="cta-button">RSVP</a>
+                <p>Regular classes, halaqahs, and Sheikh's Corner are listed on the Programs page.</p>
+                <div class="button-row" style="margin-top: 1rem;">
+                    <a class="button" href="programs.html">Go to Programs</a>
+                    <a class="button-secondary" href="posts.html">See updates</a>
                 </div>
-            </div>
+            </article>
+
+            <article class="notice-card">
+                <span class="eyebrow"><i class="fas fa-bell"></i> Need current details?</span>
+                <div class="stack">
+                    <p>Use the contact page or the updates page when a special event has not yet been fully posted here.</p>
+                    <a class="card-link" href="contact-us.html">Ask the centre directly <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
-    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
-    <p>897 Harbourview Street, Nanaimo, BC</p>
-</footer>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
+    </footer>
 
-    <!-- Main JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 

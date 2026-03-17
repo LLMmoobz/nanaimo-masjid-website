@@ -4,136 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friday Prayer Information - Islamic Centre of Nanaimo</title>
+    <title>Friday Prayer | Islamic Centre of Nanaimo</title>
+    <meta name="description" content="Friday prayer timing and visit information for the Islamic Centre of Nanaimo.">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-mosque logo-icon"></i>
-                    <h1>Islamic Centre of Nanaimo</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="friday-prayer.html">Friday Prayer Times</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ramadan.html">Ramadan Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="donate.html">Donate</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html" aria-current="page">Friday Prayer</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Friday Prayer Information Section -->
-        <section class="friday-prayer fade-in">
-            <h2>Friday Prayer Information</h2>
-            <div class="prayer-boxes">
-                <div class="prayer-box">
-                    <div class="prayer-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <div class="prayer-name">Call to Prayer</div>
-                    <div class="prayer-time" id="friday-time">Loading...</div>
-                </div>
-                
-                <div class="prayer-box">
-                    <div class="prayer-icon">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <div class="prayer-name">Khutba Start</div>
-                    <div class="prayer-time" id="khutba-time">Loading...</div>
-                </div>
-                
-                <div class="prayer-box">
-                    <div class="prayer-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="prayer-name">Location</div>
-                    <div class="prayer-time">Main Prayer Hall</div>
-                </div>
+    <main id="main-content">
+        <section class="page-hero compact fade-in">
+            <span class="eyebrow"><i class="fas fa-microphone"></i> Friday Prayer</span>
+            <h1>Friday Prayer Information</h1>
+            <p class="lede">Check the Friday prayer time before coming to the masjid.</p>
+        </section>
+
+        <section class="section-shell fade-in">
+            <div class="section-heading">
+                <span class="eyebrow"><i class="fas fa-clock"></i> This Week's Timing</span>
+                <h2>Friday prayer information</h2>
             </div>
+            <div class="prayer-boxes">
+                <article class="prayer-box">
+                    <div class="prayer-icon"><i class="fas fa-bullhorn"></i></div>
+                    <div class="prayer-name">Adhan / Dhuhr</div>
+                    <div class="prayer-time" id="friday-time">Loading...</div>
+                </article>
+                <article class="prayer-box">
+                    <div class="prayer-icon"><i class="fas fa-microphone"></i></div>
+                    <div class="prayer-name">Khutbah</div>
+                    <div class="prayer-time" id="khutba-time">Loading...</div>
+                </article>
+                <article class="prayer-box">
+                    <div class="prayer-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="prayer-name">Location</div>
+                    <div class="prayer-time">Main Hall</div>
+                </article>
+            </div>
+        </section>
+
+        <section class="grid-3 fade-in">
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-car"></i></div>
+                <h3>Arrive early</h3>
+                <p>Plan a little extra time for parking and settling in before the khutbah begins.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-praying-hands"></i></div>
+                <h3>Bring family</h3>
+                <p>Families, students, and visitors are welcome. Use the contact page if you have access questions.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-phone"></i></div>
+                <h3>Need to confirm?</h3>
+                <p>If there is a special adjustment, contact the centre directly before attending.</p>
+                <a class="card-link" href="contact-us.html">Contact the centre <i class="fas fa-arrow-right"></i></a>
+            </article>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-    <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
-    <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
-    <p>897 Harbourview Street, Nanaimo, BC</p>
-</footer>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
+    </footer>
 
-    <!-- Main JavaScript -->
     <script src="scripts/main.js"></script>
-
-    <!-- Page-specific: Friday Prayer Times -->
     <script>
         const KHUTBA_DELAY_MINUTES = 15;
 
-        document.addEventListener('DOMContentLoaded', async function() {
+        document.addEventListener("DOMContentLoaded", async () => {
             const fridayTimeEl = document.getElementById("friday-time");
             const khutbaTimeEl = document.getElementById("khutba-time");
 
             try {
-                // Fetch prayer times using shared utility function
                 const timings = await fetchPrayerTimes();
-                const dhuhrTime = timings.Dhuhr;
-
-                // Display Friday prayer time (Dhuhr)
+                const dhuhrTime = timings.Dhuhr.split(" ")[0];
                 fridayTimeEl.textContent = formatTime(dhuhrTime);
 
-                // Calculate and display Khutba time (15 minutes after Dhuhr)
-                const [hours, minutes] = dhuhrTime.split(':');
+                const [hours, minutes] = dhuhrTime.split(":");
                 const khutbaTime = new Date();
-                khutbaTime.setHours(parseInt(hours), parseInt(minutes) + KHUTBA_DELAY_MINUTES, 0, 0);
+                khutbaTime.setHours(parseInt(hours, 10), parseInt(minutes, 10) + KHUTBA_DELAY_MINUTES, 0, 0);
 
-                khutbaTimeEl.textContent = khutbaTime.toLocaleTimeString('en-US', {
-                    hour: '2-digit',
-                    minute: '2-digit',
+                khutbaTimeEl.textContent = khutbaTime.toLocaleTimeString("en-CA", {
+                    hour: "numeric",
+                    minute: "2-digit",
                     hour12: true
                 });
             } catch (error) {
-                // Fallback to seasonal estimate if API fails
-                const now = new Date();
-                const month = now.getMonth();
-
-                if (month >= 4 && month <= 8) { // Summer (May-Sep)
-                    fridayTimeEl.textContent = "1:15 PM";
-                    khutbaTimeEl.textContent = "1:30 PM";
-                } else { // Winter
-                    fridayTimeEl.textContent = "12:15 PM";
-                    khutbaTimeEl.textContent = "12:30 PM";
-                }
+                fridayTimeEl.textContent = "12:30 PM";
+                khutbaTimeEl.textContent = "12:45 PM";
             }
         });
     </script>

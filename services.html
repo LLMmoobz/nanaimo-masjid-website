@@ -4,232 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Services - Islamic Centre of Nanaimo</title>
+    <title>Services | Islamic Centre of Nanaimo</title>
+    <meta name="description" content="Prayer, education, pastoral care, and community services offered by the Islamic Centre of Nanaimo.">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fas fa-mosque logo-icon"></i>
-                    <h1>Islamic Centre of Nanaimo</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="friday-prayer.html">Friday Prayer Times</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ramadan.html">Ramadan Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="donate.html">Donate</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><i class="fas fa-mosque"></i></span>
+                <span class="brand-copy">
+                    <span class="brand-name">Islamic Centre of Nanaimo</span>
+                    <span class="brand-tag">Prayer, learning, and community life</span>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+            <div class="nav-panel" id="site-menu" data-nav-menu>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="services.html" aria-current="page">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="friday-prayer.html">Friday Prayer</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="donate.html">Donate</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="fade-in">
-            <h2 style="text-align:center;">Our Services</h2>
-            
-            <!-- Daily Services -->
-            <div class="service-grid">
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-pray"></i>
-                    </div>
-                    <h3>Daily Prayers</h3>
-                    <p>All five daily prayers are held regularly at the Islamic Centre of Nanaimo.</p>
-                    <ul class="service-details">
-                        <li>Fajr (Dawn Prayer)</li>
-                        <li>Dhuhr (Noon Prayer)</li>
-                        <li>Asr (Afternoon Prayer)</li>
-                        <li>Maghrib (Sunset Prayer)</li>
-                        <li>Isha (Night Prayer)</li>
-                    </ul>
-                    <a href="index.html" class="cta-button">
-                        <i class="fas fa-clock"></i>
-                        View Prayer Times
-                    </a>
-                </article>
+    <main id="main-content">
+        <section class="page-hero compact fade-in">
+            <span class="eyebrow"><i class="fas fa-hands-helping"></i> Community Services</span>
+            <h1>Services at the Centre</h1>
+            <p class="lede">The centre serves the community through worship, education, family services, and local programs.</p>
+        </section>
 
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3>Friday Jumu'ah</h3>
-                    <p>Friday Jumu'ah prayers are held every week with sermons (Khutbahs) delivered by volunteer community members.</p>
-                    <ul class="service-details">
-                        <li>Weekly Friday prayers</li>
-                        <li>Community Khutbahs</li>
-                        <li>Open to all Muslims</li>
-                    </ul>
-                    <a href="friday-prayer.html" class="cta-button">
-                        <i class="fas fa-calendar-alt"></i>
-                        Friday Prayer Times
-                    </a>
-                </article>
+        <section class="grid-3 fade-in">
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-praying-hands"></i></div>
+                <h3>Daily prayers</h3>
+                <p>All five daily prayers are held at the masjid.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-microphone"></i></div>
+                <h3>Friday Jumu'ah</h3>
+                <p>Weekly Friday prayer with khutbah timing published clearly for visitors and regular attendees.</p>
+                <a class="card-link" href="friday-prayer.html">View Friday details <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Classes and halaqahs</h3>
+                <p>Recurring educational programs plus a dedicated space for Sheikh-led independent instruction.</p>
+                <a class="card-link" href="programs.html">View programs <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Student support</h3>
+                <p>Friendly support for students and newcomers adjusting to life in Nanaimo while staying connected to a Muslim community.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-kaaba"></i></div>
+                <h3>Janaza support</h3>
+                <p>Guidance and coordination for families facing loss, including practical next steps and pastoral care.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon"><i class="fas fa-ring"></i></div>
+                <h3>Nikkah and family milestones</h3>
+                <p>Marriage support, ceremonies, and help connecting families with the right contact path at the centre.</p>
+            </article>
+        </section>
 
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-star-and-crescent"></i>
+        <section class="highlight-grid fade-in">
+            <article class="panel">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-users"></i> Everyday Community Care</span>
+                    <h2>Everyday services</h2>
+                </div>
+                <div class="info-list">
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-hand-holding-heart"></i></span>
+                        <div>
+                            <h4>Care in difficult moments</h4>
+                            <p>Funeral support, urgent guidance, and pastoral care.</p>
+                        </div>
                     </div>
-                    <h3>Eid Celebrations</h3>
-                    <p>Grand Eid celebrations conducted in beautiful fashion, bringing the community together.</p>
-                    <ul class="service-details">
-                        <li>Eid prayers</li>
-                        <li>Community gatherings</li>
-                        <li>Special programs and functions</li>
-                        <li>Family-friendly activities</li>
-                    </ul>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-info-circle"></i>
-                        Learn More
-                    </a>
-                </article>
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-book-open"></i></span>
+                        <div>
+                            <h4>Programs for families</h4>
+                            <p>Classes and programs for parents, youth, and adults.</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span class="pill-icon"><i class="fas fa-utensils"></i></span>
+                        <div>
+                            <h4>Seasonal gatherings</h4>
+                            <p>Ramadan iftars, Eid celebrations, and community gatherings are held at the centre.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Ramadan Programs</h3>
-                    <p>Special Ramadan programs including community Iftar potluck dinners.</p>
-                    <ul class="service-details">
-                        <li>Community Iftar potlucks</li>
-                        <li>Taraweeh prayers</li>
-                        <li>Ramadan lectures</li>
-                        <li>Special programs</li>
-                    </ul>
-                    <a href="ramadan.html" class="cta-button">
-                        <i class="fas fa-moon"></i>
-                        Ramadan Info
-                    </a>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Student Support</h3>
-                    <p>Support services for Muslim international students from over 30 countries studying at Vancouver Island University (VIU), Nanaimo.</p>
-                    <ul class="service-details">
-                        <li>International student support</li>
-                        <li>Community integration</li>
-                        <li>Mentorship programs</li>
-                        <li>Social events</li>
-                    </ul>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        Get Support
-                    </a>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Weekly Halaqas</h3>
-                    <p>Weekly study circles (Halaqas) for both brothers and sisters held every Sunday.</p>
-                    <ul class="service-details">
-                        <li>Separate sessions for men and women</li>
-                        <li>Quran study</li>
-                        <li>Islamic knowledge</li>
-                        <li>Community discussion</li>
-                    </ul>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-calendar-check"></i>
-                        Join Us
-                    </a>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-kaaba"></i>
-                    </div>
-                    <h3>Janaza (Funeral) Services</h3>
-                    <ul class="service-details">
-                        <li>24/7 emergency support</li>
-                        <li>Ghusl (ritual washing) facilities</li>
-                        <li>Burial coordination</li>
-                        <li>Grief counseling</li>
-                    </ul>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        Arrange Service
-                    </a>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3>Marriage (Nikkah) Services</h3>
-                    <ul class="service-details">
-                        <li>Nikkah ceremonies</li>
-                        <li>Premarital counseling</li>
-                        <li>Marriage certificates</li>
-                        <li>Marriage workshops</li>
-                    </ul>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-calendar-check"></i>
-                        Schedule Consultation
-                    </a>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Community Support</h3>
-                    <ul class="service-details">
-                        <li>Zakat & Sadaqah distribution</li>
-                        <li>Family counseling</li>
-                        <li>Food bank</li>
-                        <li>Refugee assistance</li>
-                    </ul>
-                    <a href="contact-us.html" class="cta-button">
-                        <i class="fas fa-hands"></i>
-                        Get Help
-                    </a>
-                </article>
-            </div>
+            <article class="notice-card">
+                <span class="eyebrow"><i class="fas fa-envelope"></i> Questions?</span>
+                <div class="stack">
+                    <p>Use the contact page for questions about scheduling or registration.</p>
+                    <a class="button" href="contact-us.html">Contact the Centre</a>
+                </div>
+            </article>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Islamic Centre of Nanaimo. All rights reserved.</p>
-        <p>Contact us: info@nanaimomasjid.com | (123) 456-7890</p>
-        <p>897 Harbourview Street, Nanaimo, BC</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Islamic Centre of Nanaimo</h3>
+                <p>A welcoming space for worship, learning, service, and community connection in Nanaimo and across Mid-Vancouver Island.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="programs.html">Programs</a>
+                    <a href="services.html">Services</a>
+                    <a href="upcoming-events.html">Special Events</a>
+                    <a href="posts.html">Updates</a>
+                </div>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <div class="footer-list">
+                    <span>897 Harbourview Street, Nanaimo, BC</span>
+                    <a href="mailto:info@nanaimomasjid.com">info@nanaimomasjid.com</a>
+                    <a href="contact-us.html">Contact and directions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Islamic Centre of Nanaimo</span>
+            <span>Information for the community.</span>
+        </div>
     </footer>
 
-    <!-- Main JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 
 </html>
-
